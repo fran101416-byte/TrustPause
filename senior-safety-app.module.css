@@ -1,0 +1,302 @@
+/* ---------- Design Tokens / CSS Variables ---------- */
+:root {
+  --color-navy: #1B3A5C;
+  --color-navy-dark: #12283F;
+  --color-amber: #D48714;
+  --color-cream: #FAF7F0;
+  --color-red: #B3402C;
+  --color-green: #2E6B4F;
+  --color-ink: #20303F;
+  --color-grey: #8A8A8A;
+  --color-light-grey: #ccc;
+  --color-white: #fff;
+  --color-text-secondary: #555;
+  --color-text-tertiary: #666;
+}
+
+/* ---------- Base & Shared UI ---------- */
+.screen {
+  min-height: 100vh;
+  background: var(--color-cream);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding: 28px 20px 60px;
+  max-width: 520px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.topBar h1 {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.backButton {
+  background: var(--color-navy);
+  border: none;
+  border-radius: 14px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+.bigButton {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  color: var(--color-white);
+  border: none;
+  border-radius: 20px;
+  padding: 26px 24px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+  text-align: left;
+  text-decoration: none;
+}
+
+.bigButton.small {
+  padding: 18px 20px;
+}
+
+.bigButtonIcon {
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigButtonLabel {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.bigButtonSub {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Button Color Variants */
+.bgNavy { background-color: var(--color-navy); }
+.bgGreen { background-color: var(--color-green); }
+.bgRed { background-color: var(--color-red); }
+.bgGrey { background-color: var(--color-grey); }
+
+/* ---------- Setup Screen ---------- */
+.formLabel {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.formInput {
+  width: 100%;
+  font-size: 22px;
+  padding: 16px 14px;
+  border-radius: 14px;
+  border: 2px solid var(--color-navy);
+  margin-bottom: 22px;
+  box-sizing: border-box;
+}
+
+.formHelpText {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-top: -14px;
+  margin-bottom: 10px;
+}
+
+.p {
+  font-size: 18px;
+  color: var(--color-ink);
+  margin-bottom: 24px;
+}
+
+/* ---------- Home Screen ---------- */
+.homeHeader {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.homeIconWrapper {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeTitle {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.homeSubtitle {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  margin-top: 6px;
+}
+
+/* ---------- Call Screen ---------- */
+.contactCard {
+  background: var(--color-white);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+  margin-bottom: 24px;
+  border: 2px solid var(--color-navy);
+}
+.contactName {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+.contactPhone {
+  font-size: 20px;
+  color: var(--color-text-secondary);
+  margin-top: 6px;
+}
+.infoText {
+  font-size: 15px;
+  color: var(--color-text-tertiary);
+  margin-top: 6px;
+}
+
+/* ---------- Photo Screen ---------- */
+.photoPlaceholder {
+  border: 3px dashed var(--color-navy);
+  border-radius: 20px;
+  padding: 50px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-navy);
+}
+.photoPlaceholder div {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.photoPreview {
+  max-width: 100%;
+  border-radius: 16px;
+  border: 2px solid var(--color-navy);
+}
+.stepHeader {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-ink);
+  margin: 22px 0 10px;
+}
+
+/* ---------- Checklist Screen ---------- */
+.checklistItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  border: 2px solid var(--color-light-grey);
+  background: var(--color-white);
+  color: var(--color-ink);
+  border-radius: 16px;
+  padding: 18px 18px;
+  margin-bottom: 14px;
+  font-size: 19px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+.checklistItem.checked {
+  background: var(--color-red);
+  color: var(--color-white);
+  border-color: var(--color-red);
+}
+
+.warningBox {
+  background: var(--color-red);
+  color: var(--color-white);
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: 10;
+  margin-bottom: 18;
+}
+
+.successBox {
+  background: var(--color-green);
+  color: var(--color-white);
+  border-radius: 18px;
+  padding: 22px;
+  margin-top: -10px;
+  margin-bottom: 18px;
+}
+
+/* ---------- Learn Screen ---------- */
+.accordionItem {
+  background: var(--color-white);
+  border: 2px solid var(--color-navy);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  padding: 18px;
+  font-size: 17px;
+}
+
+/* ---------- Modal ---------- */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: var(--color-white);
+  padding: 24px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modalTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-ink);
+  margin: 0 0 12px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
